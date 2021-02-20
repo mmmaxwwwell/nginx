@@ -36,7 +36,7 @@ use_staging_certs() {
       fi
 
       if [ ! -z "$key_path" ]; then
-        echo "key_path found in $configPath"
+        #echo "key_path found in $configPath"
         if [ ! -f "$key_path" ]; then
           echo "key_path $key_path does not exist, replacing path with staging cert"
           cat $configPath | sed --expression="s/${key_path////\\/}/${stagingCertPath////\\/}/g" > /tmp/tmp.conf
