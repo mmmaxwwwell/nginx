@@ -1,0 +1,11 @@
+image: mmmaxwwwell/nginx:develop
+manifests:
+  - image: mmmaxwwwell/nginx:develop
+    platform:
+      architecture: amd64
+      os: linux
+  - image: mmmaxwwwell/nginx:arm64v8-develop
+    platform:
+      architecture: arm64
+      os: linux
+      variant: v8
